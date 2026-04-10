@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>@uhclash</title>
+    <title>uhclash</title>
     <link rel="icon" href="/pfp.png" />
 </svelte:head>
 
