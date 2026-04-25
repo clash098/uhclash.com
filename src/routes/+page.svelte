@@ -1,10 +1,55 @@
 <script>
+    import { onMount } from 'svelte';
+
+    let time = $state('');
+    let emoji = $state('');
+
+    onMount(() => {
+        const update = () => {
+            const fmt = new Intl.DateTimeFormat('en-AU', {
+                timeZone: 'Australia/Sydney',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true,
+                weekday: 'short'
+            });
+
+            const parts = Object.fromEntries(fmt.formatToParts(new Date()).map(p => [p.type, p.value]));
+            const hour24 = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Sydney', hour: 'numeric', hour12: false }).format(new Date());
+            const minutePart = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Sydney', minute: 'numeric' }).format(new Date());
+
+            const hour = parseInt(hour24);
+            const minute = parseInt(minutePart);
+            const totalMinutes = hour * 60 + minute;
+            const isWeekday = !['Sat', 'Sun'].includes(parts.weekday);
+
+            if (totalMinutes < 7 * 60) {
+                emoji = '😴';
+            } else if (isWeekday && totalMinutes >= 8 * 60 && totalMinutes < 15 * 60 + 30) {
+                emoji = '🏫';
+            } else {
+                emoji = '☀️';
+            }
+
+            time = new Intl.DateTimeFormat('en-AU', {
+                timeZone: 'Australia/Sydney',
+                weekday: 'long',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true
+            }).format(new Date());
+        };
+        update();
+        const interval = setInterval(update, 1000);
+        return () => clearInterval(interval);
+    });
 </script>
 
 <div class="flex h-screen w-screen items-center justify-center">
     <div class="flex flex-col items-center gap-6 text-center px-6">
         <img src="/pfp.png" alt="clash" class="h-40 w-40 rounded-full" />
         <h1 class="typewriter text-5xl sm:text-7xl font-bold">hi, im clash.</h1>
+        <p class="text-sm">{emoji} {time}</p>
         <p class="max-w-xl text-2xl">a young developer from australia making cool stuff for vr games like <a href="https://oriondriftvr.com/" target="_blank" class="underline">orion drift</a> and <a href="https://www.gorillatagvr.com/" target="_blank" class="underline">gorilla tag</a>.</p>
         <!-- little button thingies -->
         <div class="flex gap-6 mt-2">
