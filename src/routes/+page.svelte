@@ -49,7 +49,7 @@
     <div class="flex flex-col items-center gap-6 text-center px-6">
         <img src="/pfp.png" alt="clash" class="h-40 w-40 rounded-full" />
         <h1 class="typewriter text-5xl sm:text-7xl font-bold">hi, im clash.</h1>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400">{emoji} {time}</p>
+        <p class="text-sm text-zinc-800 dark:text-zinc-200">{emoji} {time}</p>
         <p class="max-w-xl text-2xl text-zinc-800 dark:text-zinc-200">
             a young developer from australia making cool stuff for vr games like
             <a href="https://oriondriftvr.com/" target="_blank" class="underline decoration-zinc-400 dark:decoration-zinc-500 hover:opacity-70 transition-opacity">orion drift</a>
