@@ -2,9 +2,9 @@
 </script>
 
 <div class="flex h-screen w-screen items-center justify-center">
-    <div class="flex flex-col items-center gap-6 text-center">
+    <div class="flex flex-col items-center gap-6 text-center px-6">
         <img src="/pfp.png" alt="clash" class="h-40 w-40 rounded-full" />
-        <h1 class="typewriter text-7xl font-bold">hi, im clash.</h1>
+        <h1 class="typewriter text-5xl sm:text-7xl font-bold">hi, im clash.</h1>
         <p class="max-w-xl text-2xl">a young developer from australia making cool stuff for vr games like <a href="https://oriondriftvr.com/" target="_blank" class="underline">orion drift</a> and <a href="https://www.gorillatagvr.com/" target="_blank" class="underline">gorilla tag</a>.</p>
         <!-- little button thingies -->
         <div class="flex gap-6 mt-2">
