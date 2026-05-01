@@ -5,7 +5,7 @@
 
 <svelte:head>
     <title>uhclash</title>
-    <link rel="icon" href="/pfp.png" />
+    <link rel="icon" href="/clash_profile.png" />
     <meta property="og:title" content="@uhclash" />
     <meta property="og:description" content="a young developer from australia making cool stuff for vr games" />
     <meta property="og:image" content="https://uhclash.com/pfp.png" />

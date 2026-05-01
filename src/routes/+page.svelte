@@ -47,7 +47,7 @@
 
 <div class="flex h-screen w-screen items-center justify-center">
     <div class="flex flex-col items-center gap-6 text-center px-6">
-        <img src="/pfp.png" alt="clash" class="h-40 w-40 rounded-full" />
+        <img src="/clash_profile.png" alt="clash" class="h-40 w-40 rounded-full" />
         <h1 class="typewriter text-5xl sm:text-7xl font-bold">hi, im clash.</h1>
         <p class="text-sm text-zinc-800 dark:text-zinc-200">{emoji} {time}</p>
         <p class="max-w-xl text-2xl text-zinc-800 dark:text-zinc-200">
